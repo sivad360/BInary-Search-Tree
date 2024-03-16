@@ -1,6 +1,15 @@
+//Name: Davis Tyler
+//Class: CS145
+//Date: 3/15/2024
+//file: Test
+//Resources: cs 145 Lectures
+//Program: this program generates a binary search tree which represents a database of
+// Employees. There are methods, to add, delete, modify, and lookup. 
+
 import java.util.Random;
-public class Employee {
-//heehee
+
+public class Employee { //
+
     private int[] id;
     private String firstName;
     private String lastName;
@@ -29,17 +38,44 @@ public class Employee {
         for(int i = 0; i < lastName.length(); i++){
          id[i] = lastName.charAt(i)-96;
         }
-        
-
-        //create id number first four digits int representation of lastName a=1
-        // b=2 etc... unless last name is shorter then first 2 digits represent lastName
-        //last 4 (or 6) are randomly assigned. this is used for ordering and searching
-        // the binary tree.
-        
-        
-
 
     }
+
+
+    Employee(String[] fields){
+
+        this.firstName = fields[0].toLowerCase();
+        this.lastName = fields[1].toLowerCase();
+        this.address = fields[2].toLowerCase(); 
+        this.city = fields[3].toLowerCase();
+        this.state = fields[4].toLowerCase();
+        this.zipCode = fields[5].toLowerCase();
+        this.email = fields[6].toLowerCase();
+        this.phoneNumber = fields[7].toLowerCase();
+        this.id = new int[lastName.length()];
+
+        for(int i = 0; i < lastName.length(); i++){
+            id[i] = lastName.charAt(i)-96;
+        }
+
+    }
+
+
+    public String[] getFields(){
+        String[] fields = new String[8];
+        fields[0] = this.firstName;
+        fields[1] = this.lastName;
+        fields[2] = this.address;
+        fields[3] = this.city;
+        fields[4] = this.state;
+        fields[5] = this.zipCode;
+        fields[6] = this.email;
+        fields[7] = this.phoneNumber;
+
+        return fields;
+
+    }
+
 
     // set methods for each parameter
     public void setFirstName(String firstNameGiven){ 
@@ -68,7 +104,6 @@ public class Employee {
     }
 
     //get methods for each parameter
-
     public int getId(int index){
         return id[index];
     }
@@ -111,4 +146,5 @@ public class Employee {
         , "Email: ", email, "Phone Number: ", phoneNumber, "id: ", id[0]);
     
     }
+
 }
