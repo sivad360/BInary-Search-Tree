@@ -30,12 +30,6 @@ public class Test {
        employeeDirectory.globalRoot.getEmployee().print(); 
        employeeDirectory.globalRoot.rightNode.getEmployee().print();
        employeeDirectory.globalRoot.rightNode.rightNode.getEmployee().print();
-
-       System.out.printf("%s%n%n%n", "post deletion jane:");
-
-       employeeDirectory.globalRoot.getEmployee().print();
-       employeeDirectory.globalRoot.rightNode.getEmployee().print();
-       employeeDirectory.globalRoot.rightNode.rightNode.getEmployee().print();
        
         employeeDirectory.lookup(new int[] {26});
         

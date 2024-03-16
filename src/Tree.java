@@ -54,7 +54,6 @@ public class Tree {
                 return root.rightNode;
             } 
             else {
-                //System.out.print("has left and right");
                 root.setEmployee(getMin(root.rightNode).getEmployee()); 
                 root.rightNode = delete(root.rightNode, root.getEmployee().getId());
             }
